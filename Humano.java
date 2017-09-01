@@ -9,20 +9,36 @@ public class Humano extends Personaje
 {
     // instance variables - replace the example below with your own
     private int edadMaxima;
-
+    private boolean hombre;
     /**
      * Constructor for objects of class Humano
      */
-    public Humano  ()
+    public Humano  (boolean dinoS, boolean hombre)
     {
-        super();
+        super(dinoS);
+        this.hombre=hombre;
         edadMaxima=60;
     }
 
-    
-    public int getEdad(int y)
+     protected MoveList[] getPieceMoves()
     {
-        // put your code here
-        return x + y;
+        MoveList[] m =
+            {
+                MoveList.UP,
+                MoveList.UP_RIGHT,
+                MoveList.UP_LEFT,
+                MoveList.LEFT,
+                MoveList.RIGHT,
+                MoveList.DOWN_LEFT,
+                MoveList.DOWN_RIGHT,
+                MoveList.DOWN,
+                
+            };
+        return m;
+    }
+    
+    
+    protected boolean usesSingleMove(){return false;}
+    protected String getName(){return "Dino";
     }
 }

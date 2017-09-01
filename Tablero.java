@@ -2,9 +2,9 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 public class Tablero extends javax.swing.JPanel {
-    private ImageIcon celda, tocado;
+    private ImageIcon celda, mover, hombre, mujer, dino;
     private boolean tipoTablero;
-    private CasillasGUI[][] casillas ;
+    private Casillas[][] casillas ;
         
     public Tablero() {
         initComponents();
@@ -19,7 +19,7 @@ public class Tablero extends javax.swing.JPanel {
         casillas = new Casillas[size][size];
         for (int i = 0; i < size; i++){
             for (int j = 0; j < size; j++){
-                casillas[i][j] = new CasillasGUI(this); 
+                casillas[i][j] = new Casillas(this); 
                 casillas[i][j].setFondo(celda);
                 x = (i * 35)+1;
                 y = (j * 35)+1;
@@ -29,17 +29,21 @@ public class Tablero extends javax.swing.JPanel {
         }
     }
     
+        
     public boolean getTipoTablero(){
         return this.isTipoTablero();
     }
     
     private void cargarImagenes() {
-        this.agua = this.cargarFondo("agua.gif");
-        this.tocado = this.cargarFondo("tocado.gif");
+        this.celda = this.cargarFondo("celda.gif");
+        this.mover = this.cargarFondo("mover.gif");
+        this.hombre=this.cargarFondo("hombre.gif");
+        this.mujer=this.cargarFondo("mujer.gif");
+        this.dino=this.cargarFondo("dino.gif");
     }
     
     protected static ImageIcon cargarFondo(String ruta) {
-        java.net.URL localizacion = TableroGUI.class.getResource(ruta);
+        java.net.URL localizacion = Tablero.class.getResource(ruta);
         if (localizacion != null) {
             return new ImageIcon(localizacion);
         } else {
@@ -48,7 +52,7 @@ public class Tablero extends javax.swing.JPanel {
         }
     }
     
-    public int[] getCoordenadas(CasillasGUI casilla) {
+    public int[] getCoordenadas(Casillas casilla) {
         int [] coordenadas = new int[2];
         for (int i=0; i < this.casillas.length; i++) {
             for (int j=0; j < this.casillas.length; j++) {
@@ -61,11 +65,11 @@ public class Tablero extends javax.swing.JPanel {
         return coordenadas;
     }
     
-    public CasillasGUI[][] getCasillas() {
+    public Casillas[][] getCasillas() {
         return casillas;
     }
     
-    public void setCasillas(CasillasGUI[][] casillas) {
+    public void setCasillas(Casillas[][] casillas) {
         this.casillas = casillas;
     }
     

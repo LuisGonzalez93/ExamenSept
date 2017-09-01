@@ -1,17 +1,17 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-public class CasillasGUI extends javax.swing.JPanel implements MouseListener {
+public class Casillas extends javax.swing.JPanel implements MouseListener {
     
-    private TableroGUI tablero;
+    private Tablero tablero;
     private ImageIcon fondo;
     private static int [] casillaMarcada = new int[2];
     
-    public CasillasGUI() {        
+    public Casillas() {        
         // este constructor no se usará, se deja para poder crear el bean.        
     }
     
-    public CasillasGUI(TableroGUI t) {
+    public Casillas(Tablero t) {
         initComponents();        
         this.tablero = t;
         if(this.tablero.getTipoTablero() == true){// tablero responde a clics?
@@ -50,9 +50,8 @@ public class CasillasGUI extends javax.swing.JPanel implements MouseListener {
     public void mouseEntered(MouseEvent e){}
     public void mouseExited(MouseEvent e){}
     public void mousePressed(MouseEvent e){
-            this.setCasillaMarcada(tablero.getCoordenadas((CasillasGUI)e.getComponent())); 
-            this.tablero.pintar(this.getCasillaMarcada()[0],this.getCasillaMarcada()[1]);
-    }
+            this.setCasillaMarcada(tablero.getCoordenadas((Casillas)e.getComponent())); 
+            }
     public void mouseReleased(MouseEvent e){}
     
     public static int[] getCasillaMarcada() {
