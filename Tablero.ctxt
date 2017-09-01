@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Tablero()
+comment1.params=tipo
+comment1.target=Tablero(boolean)
+comment10.params=
+comment10.target=void\ initComponents()
+comment2.params=
+comment2.target=boolean\ getTipoTablero()
+comment3.params=
+comment3.target=void\ cargarImagenes()
+comment4.params=ruta
+comment4.target=javax.swing.ImageIcon\ cargarFondo(java.lang.String)
+comment5.params=casilla
+comment5.target=int[]\ getCoordenadas(Casillas)
+comment6.params=
+comment6.target=Casillas[][]\ getCasillas()
+comment7.params=casillas
+comment7.target=void\ setCasillas(Casillas[][])
+comment8.params=
+comment8.target=boolean\ isTipoTablero()
+comment9.params=tipoTablero
+comment9.target=void\ setTipoTablero(boolean)
+numComments=11

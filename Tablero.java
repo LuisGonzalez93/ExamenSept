@@ -1,6 +1,9 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+/**
+ * Clase que define el tamaño del tablero y sus demas funciones
+ */
 public class Tablero extends javax.swing.JPanel {
     private ImageIcon celda, mover, hombre, mujer, dino;
     private boolean tipoTablero;
@@ -35,11 +38,11 @@ public class Tablero extends javax.swing.JPanel {
     }
     
     private void cargarImagenes() {
-        this.celda = this.cargarFondo("celda.gif");
-        this.mover = this.cargarFondo("mover.gif");
-        this.hombre=this.cargarFondo("hombre.gif");
-        this.mujer=this.cargarFondo("mujer.gif");
-        this.dino=this.cargarFondo("dino.gif");
+        this.celda = this.cargarFondo("imagenes/celda.gif");
+        this.mover = this.cargarFondo("imagenes/mover.gif");
+        this.hombre=this.cargarFondo("imagenes/hombre.gif");
+        this.mujer=this.cargarFondo("imagenes/mujer.gif");
+        this.dino=this.cargarFondo("imagenes/dino.gif");
     }
     
     protected static ImageIcon cargarFondo(String ruta) {

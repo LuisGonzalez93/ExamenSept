@@ -17,10 +17,10 @@ public class Dinosaurio extends Personaje
     {
         super(dinoS);
         edadMaxima=50;
-        
+
     }
-    
-     protected MoveList[] getPieceMoves()
+
+    protected MoveList[] getPieceMoves()
     {
         MoveList[] m =
             {
@@ -32,17 +32,20 @@ public class Dinosaurio extends Personaje
                 MoveList.DOWN_LEFT,
                 MoveList.DOWN_RIGHT,
                 MoveList.DOWN,
-                
+
             };
         return m;
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      * 
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    protected boolean usesSingleMove(){return false;}
-    protected String getName(){return "Dino";}
+    
+
+    protected String getName(){
+        return "Dino";
+    }
 }

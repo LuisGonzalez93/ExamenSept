@@ -38,7 +38,15 @@ public class Humano extends Personaje
     }
     
     
-    protected boolean usesSingleMove(){return false;}
-    protected String getName(){return "Dino";
+    
+    protected String getName(){
+        String vtmp ="";
+        if(hombre){
+        vtmp="Humano";
+        }
+        else{
+        vtmp="Humana";
+        }
+        return vtmp;
     }
 }

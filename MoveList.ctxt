@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=x
+comment0.target=void\ setX(int)
+comment1.params=
+comment1.target=int\ getX()
+comment2.params=y
+comment2.target=void\ setY(int)
+comment3.params=
+comment3.target=int\ getY()
+comment4.params=m
+comment4.target=boolean\ isEqual(MoveList)
+comment5.params=x\ y
+comment5.target=boolean\ isEqual(int,\ int)
+comment6.params=x\ y
+comment6.target=MoveList(int,\ int)
+numComments=7

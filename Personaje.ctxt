@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=dinoS
+comment0.target=Personaje(boolean)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Personaje\r\n
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=MoveList[]\ getPieceMoves()
+comment3.params=
+comment3.target=java.lang.String\ getName()
+numComments=4

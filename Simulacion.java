@@ -1,35 +1,34 @@
-
+import java.util.*;
 /**
- * Write a description of class Simulacion here.
+ * Clase que lleva a cabo la simulacion de la aplicación.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Luis Gonzalez Haro) 
+ * @date (01-09-2017)
  */
 public class Simulacion
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    
+    private Casillas[][] posicion;
 
     /**
      * Constructor for objects of class Simulacion
      */
-    public Simulacion(int nDinos, int nHumanos)
-    {
-       for(int i=0;i<nDinos;i++){
+    public Simulacion(){
+        
+       Random alea= new Random();
+       Personaje din1 = new Dinosaurio(true);
+       Personaje din2 = new Dinosaurio(true);
+       Personaje din3 = new Dinosaurio(true);
+       Personaje din4 = new Dinosaurio(true);
+       Personaje din5 = new Dinosaurio(true);
+       Personaje din6 = new Dinosaurio(true);
+       Personaje hum1 = new Humano(false,false);
+       Personaje hum2 = new Humano(false,false);
+       Personaje hum3 = new Humano(false,true);
+       Personaje hum4 = new Humano(false,true);
        
-        }
        
+      
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
 }

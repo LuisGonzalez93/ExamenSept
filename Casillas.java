@@ -1,20 +1,24 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+/**
+ * Clase que define las casillas del tablero. 
+ * Posee la interfaz MouseListener.
+ */
 public class Casillas extends javax.swing.JPanel implements MouseListener {
     
     private Tablero tablero;
     private ImageIcon fondo;
     private static int [] casillaMarcada = new int[2];
     
-    public Casillas() {        
-        // este constructor no se usará, se deja para poder crear el bean.        
-    }
     
+    /**
+     * Se define por parámetro el dato de tipo tablero
+     */
     public Casillas(Tablero t) {
         initComponents();        
         this.tablero = t;
-        if(this.tablero.getTipoTablero() == true){// tablero responde a clics?
+        if(this.tablero.getTipoTablero()){// tablero responde a clics?
             this.addMouseListener(this);
         }
     }
@@ -27,7 +31,10 @@ public class Casillas extends javax.swing.JPanel implements MouseListener {
         return this.fondo;
     }
     
-                          
+    /**
+     * Se inicializan los componentes.
+     */
+    
     private void initComponents() {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -49,6 +56,9 @@ public class Casillas extends javax.swing.JPanel implements MouseListener {
     public void mouseClicked(MouseEvent e){}
     public void mouseEntered(MouseEvent e){}
     public void mouseExited(MouseEvent e){}
+    /**
+     * La casilla queda marcada cuando se presiona con el ratón.
+     */
     public void mousePressed(MouseEvent e){
             this.setCasillaMarcada(tablero.getCoordenadas((Casillas)e.getComponent())); 
             }
